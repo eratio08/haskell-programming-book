@@ -1,0 +1,16 @@
+-- Chapter 1
+-- Intermission: Equivalence exercises
+-- 1. \xy.xz -> \x.(\y.xz)
+-- a) \xz.xz -> \x.(\z.xz) | not equivalent
+-- b) \mn.mz -> \m.(\n.mz) | equivalent
+-- c) \zx.xz <- \z.(\x.xz) | not equivalent
+--
+-- 2. \xy.xxy -> \x.(\y.xxy)
+-- a) \mn.mnp -> \m.(\n.mnp) | not equivalent
+-- b) \xy.xy <- \x.(\y.xy) | not equivalent
+-- c) \ab.aab <- \a.(\b.aab) | equivalent
+--
+-- 3. \xyz.zx -> \x.(\y.(\z.zx))
+-- a) \xyz.z <- \x.(\y.(\z.z)) | not equivalent
+-- b) \tos.st -> \t.(\o.(\s.st)) | equivalent
+-- c) \mnp.mn -> \m.(\n.(\p.mn)) | not equivalent
