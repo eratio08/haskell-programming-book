@@ -14,3 +14,25 @@
 -- a) \xyz.z <- \x.(\y.(\z.z)) | not equivalent
 -- b) \tos.st -> \t.(\o.(\s.st)) | equivalent
 -- c) \mnp.mn -> \m.(\n.(\p.mn)) | not equivalent
+
+-- Chapter exercise
+-- Combinators
+-- 1. \x.xxx - x is bound - it a combinator
+-- 2. \xy.zx - not a combinator z is unbound
+-- 3. \xyz.xy(zx) - is a combinator
+-- 4. \xyz.xy(zxy) - is a combinator
+-- 5. \xy.xy(zxy) - not a combinator z is unbound
+
+-- Normal for or divergence?
+-- 1. \x.xxx - normal form and does not diverge
+-- 2. (\z.zz)(\y.yy) - diverges
+-- 3. (\x.xxx)z - does not diverge -> zzz
+
+-- Beta reduce
+-- 1. (\abc.cba)zz(\wv.w) -> \a.\b.\c.cba(z)z(\w.\v.w) -> \b.\c.cbz(z)(\w.\v.w) -> \c.czz(\w.\v.w) -> (\w.\v.w)(z)z -> \v.z(z) -> z
+-- 2. (𝜆𝑥.𝜆𝑦.𝑥𝑦𝑦)(𝜆𝑎.𝑎)𝑏 -> \y.(\a.a)yy(b) -> (\a.a)(b)b -> bb
+-- 3. (𝜆𝑦.𝑦)(𝜆𝑥.𝑥𝑥)(𝜆𝑧.𝑧𝑞) 
+-- 4. (𝜆𝑧.𝑧)(𝜆𝑧.𝑧𝑧)(𝜆𝑧.𝑧𝑦)
+-- 5. (𝜆𝑥.𝜆𝑦.𝑥𝑦𝑦)(𝜆𝑦.𝑦)𝑦
+-- 6. (𝜆𝑎.𝑎𝑎)(𝜆𝑏.𝑏𝑎)𝑐
+-- 7. (𝜆𝑥𝑦𝑧.𝑥𝑧(𝑦𝑧))(𝜆𝑥.𝑧)(𝜆𝑥.𝑎)
